@@ -18,17 +18,21 @@
                     <thead class="thead-dark text-center">
                     <tr>
 
-                <th>Id </th>
-                    <th>Migration</th>
-                    <th>batch</th>
+                    <th>No </th>
+                    <th>Periode</th>
+                    <th>TanggalMulai</th>
+                    <th>TanggalSelesai</th>
+                    <th>Keterangan</th>
                 </tr>
                     </thead>
                     <tbody>
                     @foreach($data as $item)
                 <tr>
-                    <td>{{ $item->id }}</td>
-                    <td>{{ $item->migration }}</td>
-                    <td>{{ $item->batch }}</td>
+                    <td>{{ $loop->iteration }}</td>
+                    <td>{{ $item->Periode }}</td>
+                    <td>{{ $item->TanggalMulai }}</td>
+                    <td>{{ $item->TanggalSelesai }}</td>
+                    <td>{{ $item->Keterangan }}</td>
                 </tr>
                 @endforeach
                     </tbody>

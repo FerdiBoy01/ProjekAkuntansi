@@ -16,19 +16,22 @@
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead class="thead-dark text-center">
-                    <tr>
-
-                <th>Id </th>
-                    <th>Migration</th>
-                    <th>batch</th>
+                <tr>
+                    <th>No</th>
+                    <th>id_backup </th>
+                    <th>nama_file</th>
+                    <th>tanggal_backup</th>
+                    <th>id_user</th>
                 </tr>
                     </thead>
                     <tbody>
                     @foreach($data as $item)
                 <tr>
-                    <td>{{ $item->id }}</td>
-                    <td>{{ $item->migration }}</td>
-                    <td>{{ $item->batch }}</td>
+                    <td>{{ $loop->iteration }}</td>
+                    <td>{{ $item->id_backup  }}</td>
+                    <td>{{ $item->nama_file }}</td>
+                    <td>{{ $item->tanggal_backup }}</td>
+                    <td>{{ $item->id_user }}</td>
                 </tr>
                 @endforeach
                     </tbody>

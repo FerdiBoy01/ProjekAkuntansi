@@ -1,6 +1,5 @@
 <?php
-
-$controllerDir = __DIR__ . '/app/Http/Controllers';
+$controllerDir = base_path('app/Http/Controllers');
 $modelNamespace = 'App\Models';
 
 $files = scandir($controllerDir);
