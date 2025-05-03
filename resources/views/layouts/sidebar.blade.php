@@ -28,7 +28,7 @@
             <a class="collapse-item" href="{{ route('djurnal.index') }}">Data Djurnal</a>
             <a class="collapse-item" href="{{ route('hjurnal.index') }}">Data Hjurnal</a>
             <a class="collapse-item" href="{{ route('perkiraan.index') }}">Data Perkiraan</a>
-            <a class="collapse-item" href="{{ route('migration.index') }}">Data migrasi</a>
+            <!-- <a class="collapse-item" href="{{ route('migration.index') }}">Data migrasi</a> -->
             <a class="collapse-item" href="{{ route('tperiode.index') }}">Data T.Periode</a>
             <a class="collapse-item" href="{{ route('tperkiraan.index') }}">Data T.Perkiraan</a>
             <a class="collapse-item" href="{{ route('anotherTable.index') }}">Tabel Lainnya</a>

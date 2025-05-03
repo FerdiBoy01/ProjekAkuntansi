@@ -8,7 +8,7 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3 d-flex justify-content-between align-items-center">
-            <h6 class="m-0 font-weight-bold text-primary">Tabel  Data Migrasi</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Tabel  Data Transaksi</h6>
             {{-- Tambahkan tombol jika perlu --}}
             {{-- <a href="#" class="btn btn-sm btn-success">Tambah Data</a> --}}
         </div>

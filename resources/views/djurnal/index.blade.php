@@ -10,7 +10,7 @@
         <div class="card-header py-3 d-flex justify-content-between align-items-center">
             <h6 class="m-0 font-weight-bold text-primary">Tabel Data Jurnal</h6>
             {{-- Tambahkan tombol jika perlu --}}
-            {{-- <a href="#" class="btn btn-sm btn-success">Tambah Data</a> --}}
+            {{-- <a href="#" class="btn btn-sm btn-success">Tambah Jurnal</a> --}}
         </div>
         <div class="card-body">
             <div class="table-responsive">
