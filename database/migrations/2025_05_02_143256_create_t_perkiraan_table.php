@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('NamaPerkiraan', 45);
             $table->string('Kelompok', 25);
             $table->string('Keterangan', 35);
+            $table->timestamps();
         });
     }
 
@@ -24,6 +25,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('t_perkiraan');
+        Schema::table('t_perkiraan', function (Blueprint $table) {
+            $table->dropColumn(['created_at', 'updated_at']);
+        });
     }
 };

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Data Hjurnal')
+@section('title', 'Data Perkiraan')
 
 @section('content')
 <div class="container-fluid">
@@ -10,7 +10,7 @@
         <div class="card-header py-3 d-flex justify-content-between align-items-center">
             <h6 class="m-0 font-weight-bold text-primary">Tabel  Data Perkiraan</h6>
             {{-- Tambahkan tombol jika perlu --}}
-            {{-- <a href="#" class="btn btn-sm btn-success">Tambah Data</a> --}}
+            <a href="{{ route('tperkiraan.create') }}" class="btn btn-sm btn-success">Tambah Data</a>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -22,6 +22,7 @@
                     <th>NamaPerkiraan</th>
                     <th>Kelompok</th>
                     <th>Keterangan</th>
+                    <th>Aksi</th>
                 </tr>
                     </thead>
                     <tbody>
@@ -32,6 +33,10 @@
                     <td>{{ $item->NamaPerkiraan }}</td>
                     <td>{{ $item->Kelompok }}</td>
                     <td>{{ $item->Keterangan }}</td>
+                    <td class="d-flex gap-3">
+                    <button type="button" class="btn btn-primary" style="margin-right: 15px;">edit</button>
+                    <button type="button" class="btn btn-danger">delet</button>
+                    </td>
                 </tr>
                 @endforeach
                     </tbody>

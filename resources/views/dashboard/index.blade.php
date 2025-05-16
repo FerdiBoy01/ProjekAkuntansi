@@ -9,7 +9,8 @@
     <div class="card shadow mb-4">
         <div class="card-header py-3 d-flex justify-content-between align-items-center">
             <h6 class="m-0 font-weight-bold text-primary">Tabel Data Jurnal</h6>
-            <a href="#" class="btn btn-sm btn-success">Tambah Jurnal</a>
+            {{-- Tambahkan tombol jika perlu --}}
+            {{-- <a href="#" class="btn btn-sm btn-success">Tambah Jurnal</a> --}}
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -22,12 +23,11 @@
                             <th>Tanggal Transaksi</th>
                             <th>Debet</th>
                             <th>Kredit</th>
-                            <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
                         
-                        @foreach ($data as $item)
+                        <!-- @foreach ($data as $item)
                         <tr>
                             <td>{{ $item->TransaksiID }}</td>
                             <td>{{ $item->JurnalKode }}</td>
@@ -35,19 +35,15 @@
                             <td>{{ $item->TanggalTransaksi }}</td>
                             <td>{{ number_format($item->debet, 0, ',', '.') }}</td>
                             <td>{{ number_format($item->kredit, 0, ',', '.') }}</td>
-                            <td class="d-flex gap-3">
-                            <button type="button" class="btn btn-primary" style="margin-right: 15px;">edit</button>
-                            <button type="button" class="btn btn-danger">delet</button>
-                            </td>
                         </tr>
-                        @endforeach
+                        @endforeach -->
                     </tbody>
                 </table>
 
                 {{-- Jika ingin pagination Laravel --}}
-                <div class="mt-3">
+                <!-- <div class="mt-3">
                     {{ $data->links() }}
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

@@ -18,6 +18,11 @@
 
 <!-- Menu Tabel -->
 <li class="nav-item">
+    <a class="nav-link" href="{{ route('home.index') }}">
+    <i class="fas fa-fw fa-tachometer-alt"></i>
+    <span>Dashboard</span></a>
+</li>
+<li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTabel" aria-expanded="true" aria-controls="collapseTabel">
         <i class="fas fa-table"></i>
         <span>Tabel</span>

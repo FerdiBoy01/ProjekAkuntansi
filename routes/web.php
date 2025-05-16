@@ -6,6 +6,8 @@ use App\Http\Controllers\KelompokController;
 use App\Http\Controllers\MigrationController;
 use App\Http\Controllers\PerkiraanController;
 use App\Http\Controllers\AnotherTableController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TPerkiraanController;
 use App\Http\Controllers\TPeriodeController;
 use App\Http\Controllers\TUserController;
@@ -21,11 +23,13 @@ use App\Http\Controllers\TabelAkuntansiTransaksiController;
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('dashboard');
+// });
 
+Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
+Route::resource('dashboard', DashboardController::class);
 Route::resource('djurnal', DjurnalController::class);
 Route::resource('hjurnal', HjurnalController::class);
 Route::resource('kelompok', KelompokController::class);
@@ -46,6 +50,11 @@ Route::resource('tabelakuntansitransaksi', TabelAkuntansiTransaksiController::cl
 
 
 Route::get('/another-table', [AnotherTableController::class, 'index'])->name('anotherTable.index');
+
+Route::get('/tperkiraan', [TPerkiraanController::class, 'index'])->name('tperkiraan.index');
+Route::post('/tperkiraan', [TPerkiraanController::class, 'store'])->name('tperkiraan.store');
+Route::get('/tperkiraan/create', [TPerkiraanController::class, 'create'])->name('tperkiraan.create');
+
 
 
 
